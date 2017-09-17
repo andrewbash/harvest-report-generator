@@ -1,2 +1,18 @@
-/* Styles go here */
+h1, h2, h3, h4, h5, h6 {
+	margin-top:0;
+}
+
+p {
+	margin-bottom:0;
+}
+
+.authButton {
+	margin:1em 0;
+}
+
+.results {
+	margin:1em;
+	padding:1em;
+	border:1px solid #E3EAE2;
+}
 
