@@ -9,9 +9,26 @@
   <body>
     <h1>Harvest Report Generator</h1>
 
-    <a href="https://id.getharvest.com/oauth2/authorize?client_id=_YylEFqeQ310aTVE9enA9YCj&response_type=token">
+    <p><a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a></p>
+
+    <button class="authButton" href="https://id.getharvest.com/oauth2/authorize?client_id=_YylEFqeQ310aTVE9enA9YCj&response_type=token">
     	Authenticate 
-    </a>
+    </button>
+
+    <section class="controls">
+    	<div class="apiCommand">
+    		
+    		<input type="text" placeholder="API Command">
+    		<button onclick="setCommand()">Submit</button>
+    	</div>
+    </section>
+
+
+    <section class="results">
+	    <h2 class="results__title">API Results</h2>
+	    <div id="statusContainer">Status: 0</div>
+	    <div id="dataContainer"></div>
+	</section>
    
 
 
