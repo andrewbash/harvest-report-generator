@@ -10,18 +10,22 @@ function getUrlParameter(name) {
 
 const accessToken = getUrlParameter('access_token')
 const scope = getUrlParameter('scope');
-// let command = 'https://api.harvestapp.com/v2/company';
-let command;
+// let command;
 
-function setCommand() {
+function input() {
 	const commandInput = document.querySelector('.apiCommand input');
-	command = commandInput.value;
+	const command = commandInput.value;
 	commandInput.value = '';
-	getData();
+	getData(command);
+}
+
+function buttons(b) {
+	const command = b.getAttribute('data-command');
+	getData(command);
 }
 
 
-function getData() {
+function getData(command) {
 	const statusContainer = document.querySelector('#statusContainer');
 	const dataContainer = document.querySelector('#dataContainer');
 	
