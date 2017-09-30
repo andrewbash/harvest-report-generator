@@ -13,7 +13,7 @@ const scope = getUrlParameter('scope');
 // let command;
 
 function input() {
-	const commandInput = document.querySelector('.apiCommand input');
+	const commandInput = document.querySelector('.controls__apiCommand input');
 	const command = commandInput.value;
 	commandInput.value = '';
 	getData(command);

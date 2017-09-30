@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
 
-  <body>
-    <h1>Harvest Report Generator</h1>
+<body>
 
-    <p><a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a></p>
+  <header class="siteHeader">
+    <div class="container flex">
+      <div class="siteHeader__info">
+        <h1>Harvest Report Generator</h1>
+        <p>Returns data from Harvest API v2 into the DOM.</p>
+        <p><a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a></p>
+      </div>
 
-    <a class="authButton" href="https://id.getharvest.com/oauth2/authorize?client_id=8w2vvCz5l7uqk7ihuEDIsfOn&response_type=token">
-    	Authenticate 
-    </a>
+      <a class="authButton button" href="https://id.getharvest.com/oauth2/authorize?client_id=8w2vvCz5l7uqk7ihuEDIsfOn&response_type=token">Authenticate</a>
+    </div>    
+  </header>
 
-    <section class="controls">
-    	<div class="apiCommand">
-    		
-    		<input type="text" placeholder="API Command">
-    		<button onclick="input()">Submit</button>
-      </div>      
-      <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/company">Current Company</button>
-      <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/users/me">Current User</button>
+  <section class="app container">
+
+    <section class="app_controls flex">
+
+      <div class="controls__apiCommand">
+        <input type="text" placeholder="API Command">
+        <button onclick="input()">Submit</button>
+      </div>
+
+      <div class="controls__buttons">
+        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/company">Current Company</button>
+        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/users/me">Current User</button>
+      </div>
+
     </section>
 
 
-    <section class="results">
-	    <h2 class="results__title">API Results</h2>
-	    <div id="statusContainer">Status: 0</div>
-	    <div id="dataContainer"></div>
-	</section>
-   
+    <div class="results">
+      <h2 class="results__title">API Results</h2>
+      <div id="statusContainer">Status: 0</div>
+      <div id="dataContainer"></div>
+    </div>
 
 
-  </body>
+  </section>
 
+</body>
 </html>
